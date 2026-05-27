@@ -1,0 +1,303 @@
+@baseUrl = https://localhost:7001
+
+### ============================================
+### CANCEL DELEGATE ENDPOINTS
+### ============================================
+
+### Cancel Delegate - Valid Request
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "delegateID": "b5eec2e4-ec4d-f111-bec6-70a8a5695569",
+  "cancelledOn": "2026-05-12"
+}
+
+###
+
+### Cancel Delegate - With Current Date
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "delegateID": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+  "cancelledOn": "2025-01-15"
+}
+
+###
+
+### Cancel Delegate - Invalid GUID (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "delegateID": "invalid-guid",
+  "cancelledOn": "2026-05-12"
+}
+
+###
+
+### Cancel Delegate - Missing DelegateID (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "cancelledOn": "2026-05-12"
+}
+
+###
+
+### Cancel Delegate - Invalid Date Format (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "delegateID": "b5eec2e4-ec4d-f111-bec6-70a8a5695569",
+  "cancelledOn": "invalid-date"
+}
+
+###
+
+### Cancel Delegate - Non-existent Delegate (404 Not Found)
+POST {{baseUrl}}/api/Delegation/CancelDelegate
+Content-Type: application/json
+
+{
+  "delegateID": "00000000-0000-0000-0000-000000000000",
+  "cancelledOn": "2026-05-12"
+}
+
+###
+
+### ============================================
+### GET DELEGATE LIST ENDPOINTS
+### ============================================
+
+### Get Delegate List - Active Delegations
+POST {{baseUrl}}/api/Delegation/GetDelegateList
+Content-Type: application/json
+
+{
+  "emailId": "mohans-office@kumaran.com",
+  "delegationStatus": true
+}
+
+###
+
+### Get Delegate List - Inactive/Expired Delegations
+POST {{baseUrl}}/api/Delegation/GetDelegateList
+Content-Type: application/json
+
+{
+  "emailId": "mohans-office@kumaran.com",
+  "delegationStatus": false
+}
+
+###
+
+### Get Delegate List - Different User (Active)
+POST {{baseUrl}}/api/Delegation/GetDelegateList
+Content-Type: application/json
+
+{
+  "emailId": "shobana.ganesh@kumaran.com",
+  "delegationStatus": true
+}
+
+###
+
+### Get Delegate List - Missing EmailId (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/GetDelegateList
+Content-Type: application/json
+
+{
+  "delegationStatus": true
+}
+
+###
+
+### Get Delegate List - Empty EmailId (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/GetDelegateList
+Content-Type: application/json
+
+{
+  "emailId": "",
+  "delegationStatus": true
+}
+
+###
+
+### ============================================
+### UPDATE DELEGATE ENDPOINTS
+### ============================================
+
+### Update Delegate - Full Update
+PUT {{baseUrl}}/api/Delegation/UpdateDelegate
+Content-Type: application/json
+
+{
+  "delegateId": "9ea2c965-ca55-f111-a824-000d3a3df5a3",
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "behalfUser": "Akshaysreekrishna Mariappan",
+  "delegatedByEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegatedBy": "Akshaysreekrishna Mariappan",
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateUser": "Vignesh Kumaresan",
+  "delegationStatus": true,
+  "delegatedOn": "2026-05-22",
+  "delegateFrom": "2026-05-22",
+  "delegateTo": "2110-06-30"
+}
+
+###
+
+### Update Delegate - Partial Update (Dates Only)
+PUT {{baseUrl}}/api/Delegation/UpdateDelegate
+Content-Type: application/json
+
+{
+  "delegateId": "9ea2c965-ca55-f111-a824-000d3a3df5a3",
+  "delegateFrom": "2026-06-01",
+  "delegateTo": "2026-12-31"
+}
+
+###
+
+### Update Delegate - Partial Update (Emails Only)
+PUT {{baseUrl}}/api/Delegation/UpdateDelegate
+Content-Type: application/json
+
+{
+  "delegateId": "9ea2c965-ca55-f111-a824-000d3a3df5a3",
+  "delegateUserEmail": "new.delegate@kumaran.com",
+  "behalfUserEmail": "new.behalf@kumaran.com"
+}
+
+###
+
+### Update Delegate - Invalid GUID (400 Bad Request)
+PUT {{baseUrl}}/api/Delegation/UpdateDelegate
+Content-Type: application/json
+
+{
+  "delegateId": "invalid-guid",
+  "delegateFrom": "2026-06-01"
+}
+
+###
+
+### Update Delegate - Non-existent Delegate (404 Not Found)
+PUT {{baseUrl}}/api/Delegation/UpdateDelegate
+Content-Type: application/json
+
+{
+  "delegateId": "00000000-0000-0000-0000-000000000000",
+  "delegateFrom": "2026-06-01"
+}
+
+###
+
+### ============================================
+### INSERT DELEGATE ENDPOINTS
+### ============================================
+
+### Insert Delegate - Valid Request
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "behalfUser": "Akshaysreekrishna Mariappan",
+  "delegatedByEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegatedBy": "Akshaysreekrishna Mariappan",
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateUser": "Vignesh Kumaresan",
+  "delegationStatus": true,
+  "delegatedOn": "2026-05-22",
+  "delegateFrom": "2026-05-22",
+  "delegateTo": "2026-05-31"
+}
+
+###
+
+### Insert Delegate - Another Valid Request
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "shobana.ganesh@kumaran.com",
+  "behalfUser": "Shobana Ganesh",
+  "delegatedByEmail": "shobana.ganesh@kumaran.com",
+  "delegatedBy": "Shobana Ganesh",
+  "delegateUserEmail": "mohans-office@kumaran.com",
+  "delegateUser": "Mohan S",
+  "delegationStatus": true,
+  "delegatedOn": "2026-06-01",
+  "delegateFrom": "2026-06-01",
+  "delegateTo": "2026-12-31"
+}
+
+###
+
+### Insert Delegate - Missing DelegateUserEmail (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegateFrom": "2026-05-22",
+  "delegateTo": "2026-05-31"
+}
+
+###
+
+### Insert Delegate - Missing BehalfUserEmail (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateFrom": "2026-05-22",
+  "delegateTo": "2026-05-31"
+}
+
+###
+
+### Insert Delegate - Missing DelegateFrom (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateTo": "2026-05-31"
+}
+
+###
+
+### Insert Delegate - Invalid Date Format (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateFrom": "invalid-date",
+  "delegateTo": "2026-05-31"
+}
+
+###
+
+### Insert Delegate - DelegateTo before DelegateFrom (400 Bad Request)
+POST {{baseUrl}}/api/Delegation/InsertDelegate
+Content-Type: application/json
+
+{
+  "behalfUserEmail": "akshaysreekrishna.mariappan@kumaran.com",
+  "delegateUserEmail": "vignesh.kumaresan@kumaran.com",
+  "delegateFrom": "2026-12-31",
+  "delegateTo": "2026-05-22"
+}
+
+###
+

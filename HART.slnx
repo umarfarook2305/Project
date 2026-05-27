@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LayeredArchitecture.API/HART.API.csproj" />
+    <Project Path="src/LayeredArchitecture.Application/HART.Application.csproj" />
+    <Project Path="src/LayeredArchitecture.Domain/HART.Domain.csproj" />
+    <Project Path="src/LayeredArchitecture.Infrastructure/HART.Infrastructure.csproj" />
+  </Folder>
+</Solution>
+

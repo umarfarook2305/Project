@@ -1,0 +1,39 @@
+### Get CW Lookup Data (6 categories)
+POST {{HART_API_HostAddress}}/api/LookupData
+Content-Type: application/json
+
+{
+  "type": "CW"
+}
+
+###
+
+### Get FTE Lookup Data (8 categories)
+POST {{HART_API_HostAddress}}/api/LookupData
+Content-Type: application/json
+
+{
+  "type": "FTE"
+}
+
+###
+
+### Test Invalid Type (should return 400 error)
+POST {{HART_API_HostAddress}}/api/LookupData
+Content-Type: application/json
+
+{
+  "type": "INVALID"
+}
+
+###
+
+### Test Empty Type (should return 400 error)
+POST {{HART_API_HostAddress}}/api/LookupData
+Content-Type: application/json
+
+{
+  "type": ""
+}
+
+###

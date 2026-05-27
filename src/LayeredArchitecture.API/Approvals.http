@@ -1,0 +1,389 @@
+### Get Approval List - Basic (Pending Items) with Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": [
+    "ramesh.kaliyaperumal@kumaran.com"
+  ],
+  "isPending": true,
+  "count": 5000,
+  "pageNumber": 1,
+  "pageSize": 10
+}
+
+###
+
+### Get Approval List - Page 2
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 5000,
+  "pageNumber": 2,
+  "pageSize": 10
+}
+
+###
+
+### Get Approval List - Large Page Size (50 records)
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 5000,
+  "pageNumber": 1,
+  "pageSize": 50
+}
+
+###
+
+### Get Approval List - Non-Pending Items with Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": [
+    "ramesh.kaliyaperumal@kumaran.com"
+  ],
+  "isPending": false,
+  "count": 100,
+  "pageNumber": 1,
+  "pageSize": 20
+}
+
+###
+
+### Get Approval List - With Position Type Filter + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 1000,
+  "pageNumber": 1,
+  "pageSize": 15,
+  "positionType": "UX Designer - Senior"
+}
+
+###
+
+### Get Approval List - With Multiple Filters + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 500,
+  "pageNumber": 1,
+  "pageSize": 25,
+  "positionType": "z/OS Systems Analyst",
+  "type": "FTE",
+  "funding": "Base Funded",
+  "level": "4"
+}
+
+###
+
+### Get Approval List - With Timeline Filter + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 1000,
+  "pageNumber": 1,
+  "pageSize": 20,
+  "timeline": {
+    "rangeType": "month",
+    "value": 3
+  }
+}
+
+###
+
+### Get Approval List - With Custom Date Range + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": false,
+  "count": 500,
+  "pageNumber": 1,
+  "pageSize": 30,
+  "timeline": {
+    "rangeType": "custom",
+    "startDate": "2026-01-01T00:00:00Z",
+    "endDate": "2026-03-31T23:59:59Z"
+  }
+}
+
+###
+
+### Get Approval List - MyView Filter + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 100,
+  "pageNumber": 1,
+  "pageSize": 10,
+  "loggedInEmail": "charanraj.venkatesh@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approval List - MyTeam Filter + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 100,
+  "pageNumber": 1,
+  "pageSize": 15,
+  "loggedInEmail": "manager@kumaran.com",
+  "viewType": "MyTeam"
+}
+
+###
+
+### Get Approval List - Filter by Specific Requestors + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 200,
+  "pageNumber": 1,
+  "pageSize": 20,
+  "requestor": [
+    "monash.karthikeyan@kumaran.com",
+    "jobin.swamidhas@kumaran.com"
+  ]
+}
+
+###
+
+### Get Approval List - Comprehensive Filter + Pagination
+POST {{baseUrl}}/api/Approvals/List
+Content-Type: application/json
+
+{
+  "listTable": "Approval",
+  "approver": ["ramesh.kaliyaperumal@kumaran.com"],
+  "isPending": true,
+  "count": 100,
+  "pageNumber": 1,
+  "pageSize": 10,
+  "loggedInEmail": "charanraj.venkatesh@kumaran.com",
+  "viewType": "MyView",
+  "positionType": "Senior .NET Developer",
+  "type": "FTE",
+  "funding": "Project Funded",
+  "level": "4",
+  "requestor": ["monash.karthikeyan@kumaran.com"],
+  "timeline": {
+    "rangeType": "month",
+    "value": 6
+  }
+}
+
+###
+
+#################################
+# DELEGATION API TESTS
+#################################
+
+### Get Delegated Approval List - Pending Items (Page 1)
+POST {{baseUrl}}/api/Approvals/Delegation
+Content-Type: application/json
+
+{
+  "currentUserEmail": "shobana.ganesh@kumaran.com",
+  "isPending": true,
+  "pageNumber": 1,
+  "pageSize": 10
+}
+
+###
+
+### Get Delegated Approval List - Pending Items (Page 2)
+POST {{baseUrl}}/api/Approvals/Delegation
+Content-Type: application/json
+
+{
+  "currentUserEmail": "shobana.ganesh@kumaran.com",
+  "isPending": true,
+  "pageNumber": 2,
+  "pageSize": 10
+}
+
+###
+
+### Get Delegated Approval List - Non-Pending Items
+POST {{baseUrl}}/api/Approvals/Delegation
+Content-Type: application/json
+
+{
+  "currentUserEmail": "shobana.ganesh@kumaran.com",
+  "isPending": false,
+  "pageNumber": 1,
+  "pageSize": 10
+}
+
+###
+
+### Get Delegated Approval List - Large Page Size
+POST {{baseUrl}}/api/Approvals/Delegation
+Content-Type: application/json
+
+{
+  "currentUserEmail": "shobana.ganesh@kumaran.com",
+  "isPending": true,
+  "pageNumber": 1,
+  "pageSize": 50
+}
+
+###
+
+### Get Delegated Approval List - Small Page Size (test pagination)
+POST {{baseUrl}}/api/Approvals/Delegation
+Content-Type: application/json
+
+{
+  "currentUserEmail": "shobana.ganesh@kumaran.com",
+  "isPending": true,
+  "pageNumber": 1,
+  "pageSize": 5
+}
+
+###
+
+#################################
+# APPROVER ACTION API TESTS
+#################################
+
+### Process Approver Action - Approve (Last Approver)
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Ramesh Kaliyaperumal",
+  "approverEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "approverAction": "Approved",
+  "comments": "All requirements met, approved",
+  "isTesting": true
+}
+
+###
+
+### Process Approver Action - Approve (Not Last Approver - Move to Next)
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Charan Raj",
+  "approverEmail": "charanraj.venkatesh@kumaran.com",
+  "approverAction": "Approved",
+  "comments": "First level approval granted",
+  "isTesting": true
+}
+
+###
+
+### Process Approver Action - Reject
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Ramesh Kaliyaperumal",
+  "approverEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "approverAction": "Rejected",
+  "comments": "data rejects",
+  "isTesting": true
+}
+
+###
+
+### Process Approver Action - Returned to Requestor
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Ramesh Kaliyaperumal",
+  "approverEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "approverAction": "Returned to Requestor",
+  "comments": "Please provide more details on project justification",
+  "isTesting": true
+}
+
+###
+
+### Process Approver Action - Approve with Notifications Enabled
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Ramesh Kaliyaperumal",
+  "approverEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "approverAction": "Approved",
+  "comments": "Approved - ready for production",
+  "isTesting": false
+}
+
+###
+
+### Process Approver Action - Reject with Notifications Enabled
+POST {{baseUrl}}/api/Approvals/Action
+Content-Type: application/json
+
+{
+  "requestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "requestorEmail": "shobana.ganesh@kumaran.com",
+  "approverName": "Ramesh Kaliyaperumal",
+  "approverEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "approverAction": "Rejected",
+  "comments": "Budget constraints - cannot approve at this time",
+  "isTesting": false
+}
+
+###
+
+### Variables
+@baseUrl = https://localhost:7001
+

@@ -1,0 +1,126 @@
+@baseUrl = https://localhost:7001
+@requestId = c02b2f81-db55-f111-a824-000d3a3df5a3
+
+### Get all requests (first page, default 10 items)
+GET {{baseUrl}}/api/Requests
+Content-Type: application/json
+
+### Get requests with pagination (page 2, 20 items per page)
+GET {{baseUrl}}/api/Requests?pageNumber=2&pageSize=20
+Content-Type: application/json
+
+### Get FTE requests only (first page)
+GET {{baseUrl}}/api/Requests?type=FTE&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get CW requests only (first page)
+GET {{baseUrl}}/api/Requests?type=CW&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get pending requests (with pagination)
+GET {{baseUrl}}/api/Requests?isPending=true&pageNumber=1&pageSize=15
+Content-Type: application/json
+
+### Get requests by level (with pagination)
+GET {{baseUrl}}/api/Requests?level=10&pageNumber=1&pageSize=20
+Content-Type: application/json
+
+### Get requests by funding type (with pagination)
+GET {{baseUrl}}/api/Requests?funding=Base%20Funded&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get MyView requests (logged in user's requests with pagination)
+GET {{baseUrl}}/api/Requests?loggedInEmail=charanraj.venkatesh@kumaran.com&viewType=MyView&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get MyTeam requests (direct reports' requests with pagination)
+GET {{baseUrl}}/api/Requests?loggedInEmail=manager@kumaran.com&viewType=MyTeam&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get pending requests with specific user (with pagination)
+GET {{baseUrl}}/api/Requests?pendingWith=mohans-office@kumaran.com&isPending=true&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get requests with timeline filter (last 3 months with pagination)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=month&timeline.value=3&pageNumber=1&pageSize=25
+Content-Type: application/json
+
+### Get requests with custom date range (with pagination)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=custom&timeline.startDate=2026-01-01&timeline.endDate=2026-05-31&pageNumber=1&pageSize=50
+Content-Type: application/json
+
+### Get requests with multiple filters (with pagination)
+GET {{baseUrl}}/api/Requests?type=FTE&level=10&funding=Base%20Funded&isPending=true&pageNumber=1&pageSize=10
+Content-Type: application/json
+
+### Get maximum page size (100 records)
+GET {{baseUrl}}/api/Requests?pageNumber=1&pageSize=100
+Content-Type: application/json
+
+### Get specific page with filters
+GET {{baseUrl}}/api/Requests?type=CW&isPending=false&pageNumber=3&pageSize=15
+Content-Type: application/json
+
+###############################################
+# Detail View APIs (No pagination)
+###############################################
+
+### Get FTE request detail by ID
+GET {{baseUrl}}/api/Requests/{{requestId}}?type=FTE
+Content-Type: application/json
+
+### Get CW request detail by ID
+GET {{baseUrl}}/api/Requests/1792c59b-cd55-f111-a824-000d3a3df5a3?type=CW
+Content-Type: application/json
+
+### Get request detail without specifying type
+GET {{baseUrl}}/api/Requests/{{requestId}}
+Content-Type: application/json
+
+### Get non-existent request (should return 404)
+GET {{baseUrl}}/api/Requests/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+
+### Get request with invalid GUID (should return 400)
+GET {{baseUrl}}/api/Requests/invalid-guid
+Content-Type: application/json
+
+###############################################
+# Edge Cases
+###############################################
+
+### Page number 0 (should default to 1)
+GET {{baseUrl}}/api/Requests?pageNumber=0&pageSize=10
+Content-Type: application/json
+
+### Negative page size (should default to 10)
+GET {{baseUrl}}/api/Requests?pageNumber=1&pageSize=-5
+Content-Type: application/json
+
+### Page size exceeding maximum (should limit to 100)
+GET {{baseUrl}}/api/Requests?pageNumber=1&pageSize=500
+Content-Type: application/json
+
+### Invalid view type (should return 400)
+GET {{baseUrl}}/api/Requests?viewType=InvalidView&loggedInEmail=test@kumaran.com
+Content-Type: application/json
+
+### View type without email (should return 400)
+GET {{baseUrl}}/api/Requests?viewType=MyView
+Content-Type: application/json
+
+### Invalid timeline range type (should return 400)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=invalid&timeline.value=3
+Content-Type: application/json
+
+### Timeline month without value (should return 400)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=month
+Content-Type: application/json
+
+### Timeline custom without dates (should return 400)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=custom
+Content-Type: application/json
+
+### Timeline custom with start date after end date (should return 400)
+GET {{baseUrl}}/api/Requests?timeline.rangeType=custom&timeline.startDate=2026-05-31&timeline.endDate=2026-01-01
+Content-Type: application/json

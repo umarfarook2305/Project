@@ -1,0 +1,124 @@
+@baseUrl = https://localhost:7001
+
+### ============================================
+### RESUBMIT REQUEST ENDPOINTS
+### ============================================
+
+### Resubmit Request - Full Example
+PUT {{baseUrl}}/api/Request/Resubmit
+Content-Type: application/json
+
+{
+  "request": {
+    "jobProfileId": "53267ea3-2e37-f111-88b3-70a8a567239a",
+    "lineOfBusinessId": "d9463986-2e2f-f111-88b3-7c1e520e6a72",
+    "projectName": "HART_Test",
+    "projectThemeId": "01073fc5-2e2f-f111-88b3-7c1e520e6a72",
+    "fundingTypeId": "b45e9771-342c-f111-88b3-0022486ebcba",
+    "swpRoleId": "c0d31638-2e2f-f111-88b3-7c1e520e6a72",
+    "jobFamilyId": "d2ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+    "countryId": "04d34778-d42d-f111-88b3-7c1e523ac2bc",
+    "cityId": "Cuddalore",
+    "rationale": "Test for return to requestor",
+    "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+    "requestType": "CW",
+    "isAiDataRole": false,
+    "isApplicationEngineeringInvestment": true,
+    "isAiGovernanceInvestment": true,
+    "isCwConversionFuture": false,
+    "requestedOn": "2026-05-12T10:35:25.399Z",
+    "pendingWithName": "Senthilkumar Sivasamykaliyamoorthy",
+    "pendingWithEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+    "currentStep": 1,
+    "requestedByEmail": "shakthivignesh.saravanan@kumaran.com",
+    "requestedByName": "Shakthivignesh Saravanan",
+    "requestId": "fda47077-e84d-f111-bec6-70a8a5695569"
+  },
+  "approvals": [
+    {
+      "positionStatusId": "afa75c70-c92d-f111-88b3-7c1e523ac2bc",
+      "requestedTo": "Shakthivignesh Saravanan",
+      "requestedToEmail": "shakthivignesh.saravanan@kumaran.com",
+      "sequenceOrder": 3,
+      "isApprover": false,
+      "requestedToRole": "Hiring Manager",
+      "approvedOn": "2026-05-12T10:35:25.398Z",
+      "approvedBy": "Shakthivignesh Saravanan",
+      "requestedOn": "2026-05-12T10:35:25.398Z"
+    },
+    {
+      "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+      "requestedTo": "Senthilkumar Sivasamykaliyamoorthy",
+      "requestedToEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+      "sequenceOrder": 4,
+      "isApprover": true,
+      "requestedToRole": "Vice President",
+      "approvedOn": null,
+      "approvedBy": null,
+      "requestedOn": null
+    }
+  ]
+}
+
+###
+
+### Resubmit Request - Minimal Update (Only Required Fields)
+PUT {{baseUrl}}/api/Request/Resubmit
+Content-Type: application/json
+
+{
+  "request": {
+    "requestId": "fda47077-e84d-f111-bec6-70a8a5695569",
+    "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+    "pendingWithEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com"
+  },
+  "approvals": [
+    {
+      "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+      "requestedTo": "Senthilkumar Sivasamykaliyamoorthy",
+      "requestedToEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+      "sequenceOrder": 1,
+      "isApprover": true,
+      "requestedToRole": "Vice President"
+    }
+  ]
+}
+
+###
+
+### Resubmit Request - Invalid RequestId (400 Bad Request)
+PUT {{baseUrl}}/api/Request/Resubmit
+Content-Type: application/json
+
+{
+  "request": {
+    "requestId": "invalid-guid"
+  },
+  "approvals": []
+}
+
+###
+
+### Resubmit Request - Missing RequestId (400 Bad Request)
+PUT {{baseUrl}}/api/Request/Resubmit
+Content-Type: application/json
+
+{
+  "request": {},
+  "approvals": []
+}
+
+###
+
+### Resubmit Request - Non-existent Request (404 Not Found)
+PUT {{baseUrl}}/api/Request/Resubmit
+Content-Type: application/json
+
+{
+  "request": {
+    "requestId": "00000000-0000-0000-0000-000000000000"
+  },
+  "approvals": []
+}
+
+###

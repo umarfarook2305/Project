@@ -1,0 +1,1361 @@
+### Get Status Card Details - 1 Month Duration
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "3M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "6M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "1Y",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - Financial Year
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "FY",
+  "filterType": "FINANCIAL_YEAR",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "",
+  "filterType": "CUSTOM",
+  "startDate": "2026-01-01",
+  "endDate": "2026-03-31",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Status Card Details - MyTeam View
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyTeam"
+}
+
+###
+
+### Get Status Card Details - MyOrg View
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyOrg"
+}
+
+###
+
+### Get Status Card Details - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/StatusCards
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "All"
+}
+
+###
+
+### Variables
+@baseUrl = https://localhost:7001
+
+########################################
+### Funding Distribution Endpoints
+########################################
+
+### Get Funding Distribution - 1 Month Duration, All Insights
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - 1 Month Duration, FTE Only
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "FTE",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - 1 Month Duration, CW Only
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "CW",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "3M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "6M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1Y",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - Financial Year
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "FY",
+  "filterType": "FINANCIAL_YEAR",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "",
+  "filterType": "CUSTOM",
+  "startDate": "2026-01-01",
+  "endDate": "2026-03-31",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Funding Distribution - MyTeam View
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyTeam"
+}
+
+###
+
+### Get Funding Distribution - MyOrg View
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyOrg"
+}
+
+###
+
+### Get Funding Distribution - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/FundingDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "All"
+}
+
+###
+
+########################################
+### Job Level Approved Endpoints
+########################################
+
+### Get Job Level Approved - 1 Month Duration, All Insights
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - 1 Month Duration, FTE Only
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "FTE",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - 1 Month Duration, CW Only
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "CW",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "3M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "6M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1Y",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - Financial Year
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "FY",
+  "filterType": "FINANCIAL_YEAR",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "",
+  "filterType": "CUSTOM",
+  "startDate": "2026-01-01",
+  "endDate": "2026-03-31",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Job Level Approved - MyTeam View
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyTeam"
+}
+
+###
+
+### Get Job Level Approved - MyOrg View
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "MyOrg"
+}
+
+###
+
+### Get Job Level Approved - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/JobLevelApproved
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "insightsType": "All",
+  "loggedInEmail": "ramesh.kaliyaperumal@kumaran.com",
+  "viewType": "All"
+}
+
+###
+
+########################################
+### Approved Role Distribution Endpoints
+########################################
+
+### Get Approved Role Distribution - 1 Month Duration, MyView
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - 1 Month Duration, My Team
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "My Team"
+}
+
+###
+
+### Get Approved Role Distribution - 1 Month Duration, MyTeam (alternate)
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyTeam"
+}
+
+###
+
+### Get Approved Role Distribution - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "3M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "6M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1Y",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - Financial Year
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "FY",
+  "filterType": "FINANCIAL_YEAR",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "",
+  "filterType": "CUSTOM",
+  "startDate": "2026-01-01",
+  "endDate": "2026-03-31",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyView"
+}
+
+###
+
+### Get Approved Role Distribution - MyOrg View
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "MyOrg"
+}
+
+###
+
+### Get Approved Role Distribution - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/ApprovedRoleDistribution
+Content-Type: application/json
+
+{
+  "duration": "1M",
+  "filterType": "DURATION",
+  "startDate": "",
+  "endDate": "",
+  "loggedInEmail": "prabakar.krishnamoorthy@kumaran.com",
+  "viewType": "All"
+}
+
+###
+
+########################################
+### Job Family Distribution Endpoints
+########################################
+
+### Get Job Family Distribution - 1 Month Duration, All Insights
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - 1 Month Duration, FTE Only
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"FTE\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - 1 Month Duration, CW Only
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"CW\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"6M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1Y\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - Financial Year
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"FY\",
+  \"filterType\": \"FINANCIAL_YEAR\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"\",
+  \"filterType\": \"CUSTOM\",
+  \"startDate\": \"2026-01-01\",
+  \"endDate\": \"2026-03-31\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Job Family Distribution - MyTeam View
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyTeam\"
+}
+
+###
+
+### Get Job Family Distribution - MyOrg View
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Job Family Distribution - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/JobFamilyDistribution
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"All\"
+}
+
+###
+
+### ============================================
+### PENDING STATUS DISTRIBUTION ENDPOINTS
+### ============================================
+
+### Get Pending Status Distribution - 1 Month Duration with MyView
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - 3 Months Duration
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"6M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1Y\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - Financial Year
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"FY\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - Financial Year with financialYear object
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"financialYear\": {
+    \"startDate\": \"2024-04-01\",
+    \"endDate\": \"2025-03-31\",
+    \"insightsType\": \"All\"
+  },
+  \"loggedInEmail\": \"ramesh.kaliyaperumal@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Pending Status Distribution - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"\",
+  \"filterType\": \"CUSTOM\",
+  \"startDate\": \"2024-01-01\",
+  \"endDate\": \"2024-12-31\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - FTE Only
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"FTE\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - CW Only
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"CW\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Pending Status Distribution - MyTeam View
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyTeam\"
+}
+
+###
+
+### Get Pending Status Distribution - MyOrg View
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Pending Status Distribution - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/PendingStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"All\"
+}
+
+###
+
+### ============================================
+### POSITION DISTRIBUTION STATUS ENDPOINTS
+### ============================================
+
+### Get Position Distribution Status - 1 Month Duration (Day Grouping)
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"ramesh.kaliyaperumal@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Position Distribution Status - 3 Months Duration (Month Grouping)
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"6M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1Y\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - Financial Year
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"FY\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - Financial Year with financialYear object
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"financialYear\": {
+    \"startDate\": \"2024-04-01\",
+    \"endDate\": \"2025-03-31\",
+    \"insightsType\": \"All\"
+  },
+  \"loggedInEmail\": \"ramesh.kaliyaperumal@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Position Distribution Status - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"\",
+  \"filterType\": \"CUSTOM\",
+  \"startDate\": \"2024-01-01\",
+  \"endDate\": \"2024-12-31\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - FTE Only
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"FTE\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - CW Only
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"CW\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Position Distribution Status - MyTeam View
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyTeam\"
+}
+
+###
+
+### Get Position Distribution Status - MyOrg View
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Position Distribution Status - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/PositionDistributionStatus
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"startDate\": \"\",
+  \"endDate\": \"\",
+  \"insightsType\": \"All\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"All\"
+}
+
+###
+
+### ============================================
+### HIRING TREND DATA ENDPOINTS
+### ============================================
+
+### Get Hiring Trend Data - 1 Month Duration (6 buckets, day format)
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"ramesh.kaliyaperumal@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Hiring Trend Data - 3 Months Duration (6 buckets, month format)
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Hiring Trend Data - 6 Months Duration
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"6M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Hiring Trend Data - 1 Year Duration
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"1Y\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Hiring Trend Data - Financial Year
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"FY\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Hiring Trend Data - Financial Year with explicit dates
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"filterType\": \"FINANCIAL_YEAR\",
+  \"startDate\": \"2024-04-01\",
+  \"endDate\": \"2025-03-31\",
+  \"loggedInEmail\": \"ramesh.kaliyaperumal@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Hiring Trend Data - Custom Date Range
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"filterType\": \"CUSTOM\",
+  \"startDate\": \"2024-01-01\",
+  \"endDate\": \"2024-12-31\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyView\"
+}
+
+###
+
+### Get Hiring Trend Data - MyTeam View
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyTeam\"
+}
+
+###
+
+### Get Hiring Trend Data - MyOrg View
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"3M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"MyOrg\"
+}
+
+###
+
+### Get Hiring Trend Data - All View (No Filter)
+POST {{baseUrl}}/api/Dashboard/HiringTrendData
+Content-Type: application/json
+
+{
+  \"duration\": \"1M\",
+  \"filterType\": \"DURATION\",
+  \"loggedInEmail\": \"prabakar.krishnamoorthy@kumaran.com\",
+  \"viewType\": \"All\"
+}
+
+###

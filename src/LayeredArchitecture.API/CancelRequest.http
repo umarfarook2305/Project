@@ -1,0 +1,116 @@
+### Cancel Request API Tests
+### Base URL for local development
+@baseUrl = https://localhost:7297/api
+
+### ==============================================
+### CANCEL REQUEST
+### ==============================================
+
+### Test 1: Cancel a request
+POST {{baseUrl}}/CancelRequest
+Content-Type: application/json
+
+{
+  "RequestID": "1792c59b-cd55-f111-a824-000d3a3df5a3",
+  "RequestorName": "Prabakar Krishnamoorthy",
+  "RequestorEmail": "prabakar.krishnamoorthy@kumaran.com"
+}
+
+###
+
+### Test 2: Cancel request with different user
+POST {{baseUrl}}/CancelRequest
+Content-Type: application/json
+
+{
+  "RequestID": "dbcee50b-c555-f111-a825-6045bde7afdc",
+  "RequestorName": "Ramakrishnan Ramar",
+  "RequestorEmail": "ramakrishnan.ramar@example.com"
+}
+
+###
+
+### Test 3: Invalid - Missing RequestID
+POST {{baseUrl}}/CancelRequest
+Content-Type: application/json
+
+{
+  "RequestorName": "Test User",
+  "RequestorEmail": "test@example.com"
+}
+
+###
+
+### Test 4: Invalid - Missing RequestorName
+POST {{baseUrl}}/CancelRequest
+Content-Type: application/json
+
+{
+  "RequestID": "1792c59b-cd55-f111-a824-000d3a3df5a3",
+  "RequestorEmail": "test@example.com"
+}
+
+###
+
+### Test 5: Invalid - Missing RequestorEmail
+POST {{baseUrl}}/CancelRequest
+Content-Type: application/json
+
+{
+  "RequestID": "1792c59b-cd55-f111-a824-000d3a3df5a3",
+  "RequestorName": "Test User"
+}
+
+###
+
+### ==============================================
+### EXPECTED RESPONSES
+### ==============================================
+
+### Success Response (200 OK)
+### {
+###   "message": "Records Has updated and Notification sends to User"
+### }
+
+### Error Response (400 Bad Request)
+### {
+###   "message": "RequestID is required"
+### }
+
+### Error Response (500 Internal Server Error)
+### {
+###   "message": "Error In Updating Table and Notify users"
+### }
+
+### ==============================================
+### WHAT THIS API DOES
+### ==============================================
+### 1. Updates all pending approvals to "Cancelled" status
+### 2. Sets approval.CancelledBy and approval.CancelledOn
+### 3. Updates request.CurrentStatusId to "Cancelled"
+### 4. Sets request.CompletedOn
+### 5. Returns list of approvers to notify
+### 6. Logs notifications (actual sending would be in notification service)
+
+### ==============================================
+### DATABASE CHANGES
+### ==============================================
+### Tables Modified:
+### - Approval: CancelledBy, CancelledOn, PositionStatusId
+### - Request: CompletedOn, CurrentStatusId
+###
+### Only affects records where:
+### - RequestId matches input
+### - Approval.PositionStatusId = 'afa75c70-c92d-f111-88b3-7c1e523ac2bc' (Pending)
+
+### ==============================================
+### POWER PLATFORM COMPARISON
+### ==============================================
+### Original Power Platform API URL:
+### https://94dc3aefc027e3d1ace7ec4cd6d9dd.d1.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8619c5bf0fa4405ebd85a9dc78cfbeb7/triggers/manual/paths/invoke?api-version=1
+###
+### This .NET API provides the same functionality:
+### - Updates approval and request records
+### - Returns success/error messages
+### - Prepares notification data
+### - Uses transactions for data consistency

@@ -1,0 +1,262 @@
+### FormSubmission API - FTE Request Example
+POST {{baseUrl}}/api/FormSubmission
+Content-Type: application/json
+
+{
+    "request": {
+        "jobLevelId": "9d0da9d5-bc43-f111-bec6-7ced8d9ee5ad",
+        "jobProfileId": "0b99859d-2e37-f111-88b3-70a8a567239a",
+        "jobFamilyId": "d1ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+        "positionTypeId": "8c210a00-342c-f111-88b3-0022486ebcba",
+        "fundingTypeId": "13eea977-342c-f111-88b3-0022486ebcba",
+        "statusOfPositionId": "7aa8ef55-552e-f111-88b4-6045bde7afdc",
+        "roleTypeId": "506bb4a3-342c-f111-88b3-0022486ebcba",
+        "countryId": "ccef447e-d42d-f111-88b3-7c1e523ac2bc",
+        "cityId": "New York",
+        "rationale": "Testing FTE request submission",
+        "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+        "projectName": "",
+        "isAiDataRole": true,
+        "requestType": "FTE",
+        "isNewPosition": true,
+        "positionId": "a97742dd-5e39-f111-88b3-6045bdaaf7cc",
+        "requestedOn": "2026-05-22T12:41:11.161Z",
+        "pendingWithName": "Mohans-Office",
+        "pendingWithEmail": "mohans-office@kumaran.com",
+        "currentStep": 1,
+        "requestedByEmail": "ramesh.kaliyaperumal@kumaran.com",
+        "requestedByName": "Ramesh Kaliyaperumal"
+    },
+    "approvals": [
+        {
+            "positionStatusId": "afa75c70-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Ramesh Kaliyaperumal",
+            "requestedToEmail": "ramesh.kaliyaperumal@kumaran.com",
+            "sequenceOrder": 1,
+            "isApprover": false,
+            "requestedToRole": "Hiring Manager",
+            "approvedOn": "2026-05-22T12:41:11.161Z",
+            "approvedBy": "Ramesh Kaliyaperumal",
+            "requestedOn": "2026-05-22T12:41:11.161Z"
+        },
+        {
+            "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Mohans-Office",
+            "requestedToEmail": "mohans-office@kumaran.com",
+            "sequenceOrder": 2,
+            "isApprover": true,
+            "requestedToRole": "Director",
+            "approvedOn": null,
+            "approvedBy": null,
+            "requestedOn": null
+        },
+        {
+            "positionStatusId": "9b1a8bbc-1e2f-f111-88b4-6045bde7afdc",
+            "requestedTo": "Gurusamy Sankar",
+            "requestedToEmail": "gurusamy.sankar@kumaran.com",
+            "sequenceOrder": 3,
+            "isApprover": false,
+            "requestedToRole": "HR Business Partner",
+            "approvedOn": null,
+            "approvedBy": null,
+            "requestedOn": null
+        }
+    ]
+}
+
+###
+
+### FormSubmission API - CW Request Example
+POST {{baseUrl}}/api/FormSubmission
+Content-Type: application/json
+
+{
+    "request": {
+        "jobProfileId": "9b98859d-2e37-f111-88b3-70a8a567239a",
+        "lineOfBusinessId": "d7463986-2e2f-f111-88b3-7c1e520e6a72",
+        "projectName": "",
+        "projectThemeId": "01073fc5-2e2f-f111-88b3-7c1e520e6a72",
+        "fundingTypeId": "13eea977-342c-f111-88b3-0022486ebcba",
+        "swpRoleId": "c1d31638-2e2f-f111-88b3-7c1e520e6a72",
+        "jobFamilyId": "d8ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+        "countryId": "57476401-8644-f111-bec6-7ced8d9edfe1",
+        "cityId": "Toronto",
+        "rationale": "Testing CW request submission",
+        "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+        "requestType": "CW",
+        "isAiDataRole": true,
+        "isApplicationEngineeringInvestment": false,
+        "isAiGovernanceInvestment": false,
+        "isCwConversionFuture": false,
+        "requestedOn": "2026-05-20T09:28:24.773Z",
+        "pendingWithName": "Senthilkumar Sivasamykaliyamoorthy",
+        "pendingWithEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+        "currentStep": 1,
+        "requestedByEmail": "ramesh.kaliyaperumal@kumaran.com",
+        "requestedByName": "Ramesh Kaliyaperumal"
+    },
+    "approvals": [
+        {
+            "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Senthilkumar Sivasamykaliyamoorthy",
+            "requestedToEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+            "sequenceOrder": 1,
+            "isApprover": true,
+            "requestedToRole": "Director",
+            "approvedOn": null,
+            "approvedBy": null,
+            "requestedOn": null
+        }
+    ]
+}
+
+###
+
+### FormSubmission API - FTE with CW Conversion (with rates)
+POST {{baseUrl}}/api/FormSubmission
+Content-Type: application/json
+
+{
+    "request": {
+        "jobLevelId": "9d0da9d5-bc43-f111-bec6-7ced8d9ee5ad",
+        "jobProfileId": "0b99859d-2e37-f111-88b3-70a8a567239a",
+        "jobFamilyId": "d1ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+        "positionTypeId": "8c210a00-342c-f111-88b3-0022486ebcba",
+        "fundingTypeId": "13eea977-342c-f111-88b3-0022486ebcba",
+        "statusOfPositionId": "CW_CONVERSION_STATUS_ID",
+        "roleTypeId": "506bb4a3-342c-f111-88b3-0022486ebcba",
+        "countryId": "ccef447e-d42d-f111-88b3-7c1e523ac2bc",
+        "cityId": "New York",
+        "rationale": "Testing FTE CW Conversion with rates",
+        "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+        "projectName": "Project Alpha",
+        "isAiDataRole": true,
+        "requestType": "FTE",
+        "isNewPosition": false,
+        "positionId": "a97742dd-5e39-f111-88b3-6045bdaaf7cc",
+        "cwHourlyRate": 75.50,
+        "cwAnnualRate": 150000,
+        "requestedOn": "2026-05-22T12:41:11.161Z",
+        "pendingWithName": "Mohans-Office",
+        "pendingWithEmail": "mohans-office@kumaran.com",
+        "currentStep": 1,
+        "requestedByEmail": "ramesh.kaliyaperumal@kumaran.com",
+        "requestedByName": "Ramesh Kaliyaperumal"
+    },
+    "approvals": [
+        {
+            "positionStatusId": "afa75c70-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Ramesh Kaliyaperumal",
+            "requestedToEmail": "ramesh.kaliyaperumal@kumaran.com",
+            "sequenceOrder": 1,
+            "isApprover": false,
+            "requestedToRole": "Hiring Manager",
+            "approvedOn": "2026-05-22T12:41:11.161Z",
+            "approvedBy": "Ramesh Kaliyaperumal",
+            "requestedOn": "2026-05-22T12:41:11.161Z"
+        }
+    ]
+}
+
+###
+
+### UPDATE FormSubmission API - Update FTE Request
+PUT {{baseUrl}}/api/FormSubmission/YOUR-REQUEST-ID-HERE
+Content-Type: application/json
+
+{
+    "request": {
+        "jobLevelId": "9d0da9d5-bc43-f111-bec6-7ced8d9ee5ad",
+        "jobProfileId": "0b99859d-2e37-f111-88b3-70a8a567239a",
+        "jobFamilyId": "d1ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+        "positionTypeId": "8c210a00-342c-f111-88b3-0022486ebcba",
+        "fundingTypeId": "13eea977-342c-f111-88b3-0022486ebcba",
+        "statusOfPositionId": "7aa8ef55-552e-f111-88b4-6045bde7afdc",
+        "roleTypeId": "506bb4a3-342c-f111-88b3-0022486ebcba",
+        "countryId": "ccef447e-d42d-f111-88b3-7c1e523ac2bc",
+        "cityId": "Los Angeles",
+        "rationale": "UPDATED: Changed location and rationale",
+        "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+        "projectName": "Project Beta",
+        "isAiDataRole": true,
+        "requestType": "FTE",
+        "isNewPosition": true,
+        "positionId": "a97742dd-5e39-f111-88b3-6045bdaaf7cc",
+        "requestedOn": "2026-05-22T12:41:11.161Z",
+        "pendingWithName": "New Director Name",
+        "pendingWithEmail": "newdirector@kumaran.com",
+        "currentStep": 2,
+        "requestedByEmail": "ramesh.kaliyaperumal@kumaran.com",
+        "requestedByName": "Ramesh Kaliyaperumal"
+    },
+    "approvals": [
+        {
+            "positionStatusId": "afa75c70-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Ramesh Kaliyaperumal",
+            "requestedToEmail": "ramesh.kaliyaperumal@kumaran.com",
+            "sequenceOrder": 1,
+            "isApprover": false,
+            "requestedToRole": "Hiring Manager",
+            "approvedOn": "2026-05-22T12:41:11.161Z",
+            "approvedBy": "Ramesh Kaliyaperumal",
+            "requestedOn": "2026-05-22T12:41:11.161Z"
+        },
+        {
+            "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "New Director Name",
+            "requestedToEmail": "newdirector@kumaran.com",
+            "sequenceOrder": 2,
+            "isApprover": true,
+            "requestedToRole": "Director",
+            "approvedOn": "2026-05-23T10:30:00.000Z",
+            "approvedBy": "New Director Name",
+            "requestedOn": "2026-05-22T14:00:00.000Z"
+        }
+    ]
+}
+
+###
+
+### UPDATE FormSubmission API - Update CW Request
+PUT {{baseUrl}}/api/FormSubmission/YOUR-REQUEST-ID-HERE
+Content-Type: application/json
+
+{
+    "request": {
+        "jobProfileId": "9b98859d-2e37-f111-88b3-70a8a567239a",
+        "lineOfBusinessId": "d7463986-2e2f-f111-88b3-7c1e520e6a72",
+        "projectName": "Updated Project Name",
+        "projectThemeId": "01073fc5-2e2f-f111-88b3-7c1e520e6a72",
+        "fundingTypeId": "13eea977-342c-f111-88b3-0022486ebcba",
+        "swpRoleId": "c1d31638-2e2f-f111-88b3-7c1e520e6a72",
+        "jobFamilyId": "d8ba52b6-2d2f-f111-88b3-7c1e520e6a72",
+        "countryId": "57476401-8644-f111-bec6-7ced8d9edfe1",
+        "cityId": "Montreal",
+        "rationale": "UPDATED: Changed city and project details",
+        "currentStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+        "requestType": "CW",
+        "isAiDataRole": true,
+        "isApplicationEngineeringInvestment": true,
+        "isAiGovernanceInvestment": false,
+        "isCwConversionFuture": true,
+        "requestedOn": "2026-05-20T09:28:24.773Z",
+        "pendingWithName": "Senthilkumar Sivasamykaliyamoorthy",
+        "pendingWithEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+        "currentStep": 1,
+        "requestedByEmail": "ramesh.kaliyaperumal@kumaran.com",
+        "requestedByName": "Ramesh Kaliyaperumal"
+    },
+    "approvals": [
+        {
+            "positionStatusId": "63557169-c92d-f111-88b3-7c1e523ac2bc",
+            "requestedTo": "Senthilkumar Sivasamykaliyamoorthy",
+            "requestedToEmail": "senthilkumar.sivasamykaliyamoorthy@kumaran.com",
+            "sequenceOrder": 1,
+            "isApprover": true,
+            "requestedToRole": "Director",
+            "approvedOn": "2026-05-23T09:00:00.000Z",
+            "approvedBy": "Senthilkumar Sivasamykaliyamoorthy",
+            "requestedOn": "2026-05-20T10:00:00.000Z"
+        }
+    ]
+}

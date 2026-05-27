@@ -1,0 +1,38 @@
+### Get All Job Profiles (no filter)
+POST {{HART_API_HostAddress}}/api/JobProfile
+Content-Type: application/json
+
+{
+  "jobLevel": ""
+}
+
+###
+
+### Get All Job Profiles (null filter)
+POST {{HART_API_HostAddress}}/api/JobProfile
+Content-Type: application/json
+
+{
+}
+
+###
+
+### Get Job Profiles by Job Level Name
+POST {{HART_API_HostAddress}}/api/JobProfile
+Content-Type: application/json
+
+{
+  "jobLevel": "4"
+}
+
+###
+
+### Get Job Profiles by Job Level ID
+POST {{HART_API_HostAddress}}/api/JobProfile
+Content-Type: application/json
+
+{
+  "jobLevel": "12be35c3-bc43-f111-bec6-7ced8d9ee5ad"
+}
+
+###

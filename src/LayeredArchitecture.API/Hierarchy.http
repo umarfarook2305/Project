@@ -1,0 +1,47 @@
+### Get Employee Hierarchy (Valid Email)
+POST {{HART_API_HostAddress}}/api/Hierarchy
+Content-Type: application/json
+
+{
+  "email": "prabakar.krishnamoorthy@kumaran.com"
+}
+
+###
+
+### Get Employee Hierarchy (Another Example)
+POST {{HART_API_HostAddress}}/api/Hierarchy
+Content-Type: application/json
+
+{
+  "email": "john.doe@company.com"
+}
+
+###
+
+### Test Empty Email (should return 400 error)
+POST {{HART_API_HostAddress}}/api/Hierarchy
+Content-Type: application/json
+
+{
+  "email": ""
+}
+
+###
+
+### Test Missing Email (should return 400 error)
+POST {{HART_API_HostAddress}}/api/Hierarchy
+Content-Type: application/json
+
+{}
+
+###
+
+### Test Non-existent Email (returns success with count 0)
+POST {{HART_API_HostAddress}}/api/Hierarchy
+Content-Type: application/json
+
+{
+  "email": "nonexistent@company.com"
+}
+
+###

@@ -1,0 +1,77 @@
+### Position API Tests
+### Base URL for local development
+@baseUrl = https://localhost:7297/api
+
+### ==============================================
+### GET ALL POSITIONS
+### ==============================================
+
+### Test 1: Get all positions
+GET {{baseUrl}}/Positions
+Accept: application/json
+
+###
+
+### ==============================================
+### EXPECTED RESPONSE STRUCTURE
+### ==============================================
+### {
+###   "status": "success",
+###   "count": 21,
+###   "data": [
+###     {
+###       "employeeName": "Prabakar Krishnamoorthy",
+###       "employeeGuid": "040e809b-332c-f111-88b3-0022486ebcba",
+###       "positionId": "P215622",
+###       "positionIdGuid": "a97742dd-5e39-f111-88b3-6045bdaaf7cc",
+###       "positionStatus": "Open",
+###       "jobRequisitionId": null,
+###       "jobRequisitionGuid": null,
+###       "jobProfileName": null
+###     },
+###     {
+###       "employeeName": "Mohan Kumar Subramanyam",
+###       "employeeGuid": "e53107c4-522e-f111-88b4-6045bde7afdc",
+###       "positionId": "P214955",
+###       "positionIdGuid": "47160551-5e39-f111-88b3-6045bdaaf7cc",
+###       "positionStatus": "Filled",
+###       "jobRequisitionId": "2607532",
+###       "jobRequisitionGuid": "6a869548-583d-f111-88b4-6045bde7afdc",
+###       "jobProfileName": "z/OS Systems Analyst"
+###     },
+###     {
+###       "employeeName": null,
+###       "employeeGuid": null,
+###       "positionId": null,
+###       "positionIdGuid": null,
+###       "positionStatus": null,
+###       "jobRequisitionId": "2607533",
+###       "jobRequisitionGuid": "a0de2ac9-5c3d-f111-88b3-7c1e523b6a71",
+###       "jobProfileName": "Web Architect"
+###     }
+###   ]
+### }
+
+### ==============================================
+### VALIDATION CHECKS
+### ==============================================
+### ✓ Status should be "success"
+### ✓ Count should match number of records in data array
+### ✓ Data array contains positions with employee details
+### ✓ Positions with job requisitions show profile name
+### ✓ Orphan job requisitions (no position) have null employee/position fields
+### ✓ All GUIDs are properly formatted
+### ✓ Position statuses are "Open", "Filled", etc.
+
+### ==============================================
+### POWER PLATFORM API COMPARISON
+### ==============================================
+### Original Power Platform API URL:
+### https://94dc3aefc027e3d1ace7ec4cd6d9dd.d1.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/bd88a534738542149bbdf84784747997/triggers/manual/paths/invoke?api-version=1
+###
+### This .NET API provides the same response structure with:
+### - User details from UserDetail table
+### - Position information from Position table
+### - Job requisition data from JobRequisition table
+### - Job profile names from JobProfile table
+### - Proper handling of null relationships
